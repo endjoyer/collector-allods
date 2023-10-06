@@ -1,0 +1,179 @@
+@import url(../vendor/normalize.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:700);
+
+body {
+  color: #fff;
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 892px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url('../images/glow-svg.svg') center no-repeat,
+    url('../images/blue.png') bottom center no-repeat,
+    url('../images/women.png') 12% bottom no-repeat,
+    url('../images/men.png') 94% bottom no-repeat,
+    linear-gradient(to right, rgb(24, 12, 0) 0%, rgba(16, 8, 0, 0) 100%) top
+      left / 577px 100% no-repeat,
+    linear-gradient(to left, rgb(24, 12, 0) 0%, rgba(16, 8, 0, 0) 100%) top
+      right / 577px 100% no-repeat,
+    linear-gradient(to top, rgb(24, 12, 0) 0%, rgba(16, 8, 0, 0) 100%) bottom
+      center / 100% 380px no-repeat,
+    url('../images/background.png') top center / cover no-repeat;
+  background-size: auto, auto, auto, auto, 577px 100%, 577px 100%, 100% 380px,
+    cover;
+}
+.header__logo {
+  margin-top: 35px;
+}
+.header__boxes {
+  margin-right: 50px;
+}
+.header__title {
+  margin: 20px 30px 0;
+  font-family: Roboto Condensed;
+  font-size: 42px;
+  font-weight: 700;
+}
+.header__subtitle {
+  margin: 20px 30px 60px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.set {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 1050px;
+  background: url('../images/blue.png') bottom center no-repeat,
+    url('../images/main/set-background.png'), lightgray 50% / cover no-repeat;
+}
+.set__pet-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 680px;
+  min-height: 680px;
+}
+.set__pet-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 680px;
+  min-height: 680px;
+  border-radius: 686px;
+  border: 1px solid #000;
+  opacity: 0.2;
+  background: #416df4;
+  filter: blur(100px);
+}
+.set__pet {
+  position: relative;
+}
+
+.set__title {
+  color: #416df4;
+  font-family: Roboto Condensed;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 35px;
+}
+
+.set__table {
+  width: 610px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.set__th {
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.55);
+  color: #671d00;
+  text-align: center;
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.set__th:last-child {
+  padding-right: 0;
+}
+
+.set__th .set__th-inner {
+  padding: 5px 0;
+  margin: 0 0 9px;
+  border: 1px solid rgba(103, 29, 0, 0.48);
+}
+
+.set__table-elem {
+  border: 1px solid rgba(103, 29, 0, 0.48);
+}
+
+.set__td {
+  padding: 5px 0 0;
+  font-size: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  text-align: left;
+}
+
+/* Ширина для каждого столбца */
+.set__table th:nth-child(1),
+.set__table td:nth-child(1) {
+  width: 62px;
+}
+
+.set__table th:nth-child(2),
+.set__table td:nth-child(2) {
+  width: 250px;
+  padding: 0 0 0 20px;
+}
+
+.set__table th:nth-child(3),
+.set__table td:nth-child(3),
+.set__table th:nth-child(4),
+.set__table td:nth-child(4) {
+  width: 140px;
+  text-align: center;
+}
+
+.set__box-conteiner {
+  margin: 35px 0 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 35px;
+}
+
+.set__box-price {
+  font-size: 50px;
+  margin: 0 0 20px;
+}
+.set__button {
+  width: 180px;
+  height: 40px;
+  border-radius: 7px;
+  background: #fcff00;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0 0 30px;
+  transition: all 0.3s ease 0s;
+}
+
+.set__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.set__button:active {
+  opacity: 0.7;
+}
